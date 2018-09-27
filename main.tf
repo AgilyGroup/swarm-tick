@@ -1,5 +1,6 @@
 provider "google" {
-  version     = "1.18.0"
+// https://github.com/hashicorp/terraform/issues/16641
+//  version     = "1.18.0"
   credentials = "${file("account.json")}"
   project     = "${var.project}"
   region      = "${var.region}"
