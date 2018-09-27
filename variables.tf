@@ -1,3 +1,11 @@
+variable "project" {
+  type = "string"
+}
+
+variable "region" {
+  type = "string"
+}
+
 variable "swarm_name" {
   type = "string"
 }

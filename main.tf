@@ -1,3 +1,10 @@
+provider "google" {
+  version     = "1.18.0"
+  credentials = "${file("account.json")}"
+  project     = "${var.project}"
+  region      = "${var.region}"
+}
+
 resource "google_compute_firewall" "tick" {
   name    = "${terraform.workspace}-tick"
   network = "${var.swarm_name}"
